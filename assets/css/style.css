@@ -25,7 +25,8 @@ body{
 }
 .container{
     min-width: 375px;
-    max-width: 1440px;
+    max-width: 1200px;
+    max-height: 740px;
     padding-inline:2rem;
 }
 img{
@@ -40,7 +41,8 @@ p{
 h1{
     font-family: 'Fraunces', serif;
     font-weight: var(--fw-xl);
-    font-size: 2.375rem;
+    font-size: 2.125rem;
+    line-height: 2.5rem;
 }
 
 .category, .product_description, .original_price{
@@ -63,6 +65,7 @@ h1{
     background-color: var(--clr-lighter);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    padding:1.5rem;
 }
 
 .category{
@@ -70,7 +73,7 @@ h1{
 }
 
 .product_description{
-    line-height: 1.5rem;
+    line-height: 1.875rem;
 }
 
 .price{
@@ -102,3 +105,32 @@ h1{
     font-weight: var(--fw-xl);
 }
 
+.product_img_desktop{
+    display: none;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width: 768px){ /* tablet size */
+    .row{
+        flex-direction: row;
+    }
+    .product_img{
+        display: none;
+    }
+    .product_img_desktop{
+        display: block;
+    }
+    .product_img_desktop img{
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    .product{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+}
+
+/* Todo: add desktop size */
