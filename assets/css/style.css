@@ -19,7 +19,7 @@ body{
     background-color: var(--clr-bg);
     font-family: 'Montserrat', sans-serif;
 }
-.container{
+main{
     max-height: 100%;
     padding:2rem;
 }
@@ -42,6 +42,7 @@ h1{
 .category, .product_description, .original_price{
     color: var(--clr-grayish-dark);
 }
+
 /* #endregion common rules */
 
 /* flex-container */
@@ -100,10 +101,6 @@ h1{
     border: none;
 }
 
-.product_img_desktop{
-    display: none;
-}
-
 /* hover effects  */
 button:hover{
     background-color: hsl(158, 85%, 16%);
@@ -113,24 +110,20 @@ button:hover{
 
 /* Responsive */
 
-@media screen and (min-width: 768px){ /* tablet size */
+@media screen and (min-width: 768px){ 
     body{
         display: flex;
         align-items: center;
-        height: 100vh;
+        justify-content: center;
+        min-height: 100vh;
     }
     .row{
         flex-direction: row;
     }
-    .product_img{
-        display: none;
-    }
-    .product_img_desktop{
-        display: block;
-    }
-    .product_img_desktop img{
+    .product_img img{
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
     }
     .product{
         border-bottom-left-radius: 0;
@@ -140,9 +133,8 @@ button:hover{
 }
 
 @media screen and (min-width: 992px){
-    .container{
+    main{
         max-height: 580px;
         max-width: 780px;
     }
 }
-/* Todo: add desktop size */
